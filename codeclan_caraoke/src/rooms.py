@@ -11,3 +11,12 @@ class Room:
 
     def check_out(self):
         self.guests_in_room.clear()
+
+    def add_song(self, list_of_songs, fav_song):
+        if fav_song in list_of_songs:
+            self.songs.append(fav_song)
+
+        else:
+            return
+
+

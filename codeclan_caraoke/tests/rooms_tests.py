@@ -30,4 +30,16 @@ class TestRoom(unittest.TestCase):
         self.room_1.check_out()
         self.assertEqual(0, len(self.room_1.guests_in_room))
 
-    def 
+    def test_add_song_to_room(self):
+        guest = Guest("Bill", "Location - Khalid", 25)
+        fav_song = guest.fav_song
+        songs = Song("Karaoke Bar")
+        self.room_1.add_song(songs.song_list, fav_song)
+        self.assertEqual(1, len(self.room_1.songs))
+
+    def test_add_song_to_room_2(self):
+        guest = Guest("Bill", "Gold - Galantis", 25)
+        fav_song = guest.fav_song
+        songs = Song("Karaoke Bar")
+        self.room_1.add_song(songs.song_list, fav_song)
+        self.assertEqual(0, len(self.room_1.songs))
