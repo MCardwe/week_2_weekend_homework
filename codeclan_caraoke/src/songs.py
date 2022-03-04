@@ -1,6 +1,5 @@
 
 
 class Song:
-    def __init__(self, name, duration):
-        self.name = name
-        self.duration = duration
+    def __init__(self, list_of_songs):
+        self.song_list = list_of_songs
